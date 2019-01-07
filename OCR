@@ -1,0 +1,8 @@
+#coding=utf-8 
+import pytesseract
+from PIL import Image
+
+pytesseract.pytesseract.tesseract_cmd = 'C://Program Files (x86)/Tesseract-OCR/tesseract.exe'
+text = pytesseract.image_to_string(Image.open('C:\Users\User\Desktop\\122.jpg'),config='-psm 2000')
+#(Image.open('images/table/img.jpg'),config='-psm 10')
+print text
